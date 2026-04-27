@@ -44,17 +44,17 @@ export const InboxScreen = () => {
   return (
     <div className="flex h-full flex-col">
       {/* Top Bar */}
-      <header className="glass sticky top-0 z-20 px-5 pt-5 pb-3 border-b border-border/60">
+      <header className="sticky top-0 z-20 bg-primary px-5 pt-5 pb-3 border-b border-primary-dark">
         <div className="flex items-start justify-between">
           <div>
-            <h1 className="font-display text-[26px] font-extrabold tracking-tight text-foreground leading-none">
+            <h1 className="font-display text-[26px] font-extrabold tracking-tight text-primary-foreground leading-none">
               Attain
             </h1>
-            <p className="mt-1.5 text-[13px] text-muted-foreground">
-              <span className="font-semibold text-foreground">{importantCount}</span> need attention
+            <p className="mt-1.5 text-[13px] text-primary-foreground/75">
+              <span className="font-semibold text-primary-foreground">{importantCount}</span> need attention
             </p>
           </div>
-          <button className="grid h-10 w-10 place-items-center rounded-full bg-gradient-ai shadow-glow text-ai-foreground active:scale-95 transition-transform">
+          <button className="grid h-10 w-10 place-items-center rounded-full bg-primary-foreground/15 backdrop-blur text-primary-foreground active:scale-95 transition-transform">
             <Sparkles className="h-4.5 w-4.5" strokeWidth={2.2} />
           </button>
         </div>

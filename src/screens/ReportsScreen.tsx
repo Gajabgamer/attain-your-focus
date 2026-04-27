@@ -53,9 +53,9 @@ export const ReportsScreen = () => {
 
   return (
     <div className="flex h-full flex-col">
-      <header className="glass sticky top-0 z-20 px-5 pt-5 pb-4 border-b border-border/60">
-        <h1 className="font-display text-[26px] font-extrabold tracking-tight">Reports</h1>
-        <p className="mt-1 text-[13px] text-muted-foreground">Last 7 days • Updated just now</p>
+      <header className="sticky top-0 z-20 bg-primary px-5 pt-5 pb-4 border-b border-primary-dark">
+        <h1 className="font-display text-[26px] font-extrabold tracking-tight text-primary-foreground">Reports</h1>
+        <p className="mt-1 text-[13px] text-primary-foreground/75">Last 7 days • Updated just now</p>
       </header>
 
       <div className="flex-1 overflow-y-auto scrollbar-hidden px-4 pt-4 pb-4 space-y-4">
