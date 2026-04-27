@@ -66,9 +66,9 @@ export const SettingsScreen = () => {
 
   return (
     <div className="flex h-full flex-col">
-      <header className="sticky top-0 z-20 bg-primary px-5 pt-5 pb-4 border-b border-primary-dark">
-        <h1 className="font-display text-[26px] font-extrabold tracking-tight text-primary-foreground">Settings</h1>
-        <p className="mt-1 text-[13px] text-primary-foreground/75">Personalize how Attain behaves</p>
+      <header className="glass sticky top-0 z-20 px-5 pt-5 pb-4 border-b border-border/60">
+        <h1 className="font-display text-[26px] font-extrabold tracking-tight">Settings</h1>
+        <p className="mt-1 text-[13px] text-muted-foreground">Personalize how Attain behaves</p>
       </header>
 
       <div className="flex-1 overflow-y-auto scrollbar-hidden px-4 py-4 space-y-5">
