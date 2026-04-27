@@ -16,7 +16,7 @@ const items: { id: Tab; label: string; Icon: typeof Inbox }[] = [
 
 export const BottomNav = ({ active, onChange }: BottomNavProps) => {
   return (
-    <nav className="glass border-t border-border px-2 pt-2 pb-3 tap-highlight-none">
+    <nav className="bg-primary border-t border-primary-dark px-2 pt-2 pb-3 tap-highlight-none">
       <ul className="flex items-center justify-around">
         {items.map(({ id, label, Icon }) => {
           const isActive = active === id;
@@ -29,13 +29,13 @@ export const BottomNav = ({ active, onChange }: BottomNavProps) => {
                 <span
                   className={cn(
                     "relative flex h-9 w-16 items-center justify-center rounded-full transition-all duration-300",
-                    isActive ? "bg-primary/12" : "bg-transparent"
+                    isActive ? "bg-primary-foreground/20" : "bg-transparent"
                   )}
                 >
                   <Icon
                     className={cn(
                       "h-5 w-5 transition-colors duration-200",
-                      isActive ? "text-primary" : "text-muted-foreground"
+                      isActive ? "text-primary-foreground" : "text-primary-foreground/65"
                     )}
                     strokeWidth={isActive ? 2.4 : 1.8}
                   />
@@ -43,7 +43,7 @@ export const BottomNav = ({ active, onChange }: BottomNavProps) => {
                 <span
                   className={cn(
                     "text-[11px] font-medium tracking-wide transition-colors",
-                    isActive ? "text-primary" : "text-muted-foreground"
+                    isActive ? "text-primary-foreground" : "text-primary-foreground/65"
                   )}
                 >
                   {label}
