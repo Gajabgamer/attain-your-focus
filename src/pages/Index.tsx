@@ -1,16 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { BottomNav, Tab } from "@/components/BottomNav";
+import { InboxScreen } from "@/screens/InboxScreen";
+import { ReportsScreen } from "@/screens/ReportsScreen";
+import { SettingsScreen } from "@/screens/SettingsScreen";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const PhoneShell = () => {
+  const [tab, setTab] = useState<Tab>("inbox");
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen w-full bg-background md:bg-muted/40 flex items-center justify-center md:p-6">
+      {/* Phone frame on desktop, full-bleed on mobile */}
+      <div className="relative w-full max-w-[420px] h-screen md:h-[860px] md:max-h-[92vh] md:rounded-[2.5rem] bg-background md:shadow-elevated overflow-hidden md:border md:border-border flex flex-col">
+        <main key={tab} className="flex-1 min-h-0 overflow-hidden animate-fade-in">
+          {tab === "inbox" && <InboxScreen />}
+          {tab === "reports" && <ReportsScreen />}
+          {tab === "settings" && <SettingsScreen />}
+        </main>
+        <BottomNav active={tab} onChange={setTab} />
+      </div>
     </div>
   );
 };
 
-const Index = PlaceholderIndex;
+const Index = () => (
+  <ThemeProvider>
+    <PhoneShell />
+  </ThemeProvider>
+);
 
 export default Index;
