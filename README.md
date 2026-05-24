@@ -100,7 +100,7 @@ Configure the following environment variables in your `.env.local` file:
 
 ## Deployment
 
-The application is deployed to **Vercel** with automatic deployments on push to the main branch.
+The application is deployed to **Vercel** with automatic deployments on push to the main branch. getattain.vercel.app
 
 ```bash
 # Deploy to production
